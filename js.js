@@ -38,10 +38,7 @@ function addNumbers(firstNumber, secondNumber) {
     return num1 * num2;
   }
 
-// sum = Number(firstNumber) + Number(secondNumber);
-// negation = Number(firstNumber) - Number(secondNumber);
-// multiply = Number(firstNumber) * Number(secondNumber);
-// division = Number(firstNumber) / Number(secondNumber);
+
 
 if (firstNumber === '' || secondNumber === '') {
     alert("Error, you didnt write a number!");
@@ -60,13 +57,13 @@ else if (secondNumber == 0) {
        
     }
     else {
-        alert(negation);
+        alert(subtractNumbers(firstNumber, secondNumber));
     }
     
     
 }
 else {
-    alert(sum + ' ' + negation + ' ' + multiply + ' ' + division);
+    alert(addNumbers(firstNumber, secondNumber) + ' ' + subtractNumbers(firstNumber, secondNumber) + ' ' + multiplyNumbers(firstNumber, secondNumber) + ' ' + divideNumbers(firstNumber, secondNumber));
 }
 
 
