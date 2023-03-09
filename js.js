@@ -4,12 +4,44 @@ let firstNumber,secondNumber, sum, division, multiply, negation, question;
 firstNumber = prompt("Enter the first number: ");
 secondNumber = prompt("Enter the second number: ");
 
+function addNumbers(firstNumber, secondNumber) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+      return 'Error: Both parameters must be numbers';
+    }
+    return num1 + num2;
+  }
+  
+  
+  function subtractNumbers(firstNumber, secondNumber) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+      return 'Error: Both parameters must be numbers';
+    }
+    return num1 - num2;
+  }
+  
+  
+  function divideNumbers(firstNumber, secondNumber) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+      return 'Error: Both parameters must be numbers';
+    }
+    if (num2 === 0) {
+      return 'Error: Cannot divide by zero';
+    }
+    return num1 / num2;
+  }
+  
+ 
+  function multiplyNumbers(firstNumber, secondNumber) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+      return 'Error: Both parameters must be numbers';
+    }
+    return num1 * num2;
+  }
 
-
-sum = Number(firstNumber) + Number(secondNumber);
-negation = Number(firstNumber) - Number(secondNumber);
-multiply = Number(firstNumber) * Number(secondNumber);
-division = Number(firstNumber) / Number(secondNumber);
+// sum = Number(firstNumber) + Number(secondNumber);
+// negation = Number(firstNumber) - Number(secondNumber);
+// multiply = Number(firstNumber) * Number(secondNumber);
+// division = Number(firstNumber) / Number(secondNumber);
 
 if (firstNumber === '' || secondNumber === '') {
     alert("Error, you didnt write a number!");
