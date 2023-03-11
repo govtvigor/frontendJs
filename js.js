@@ -1,27 +1,24 @@
 let firstNumber,secondNumber, sum, division, multiply, negation, question;
 
 
-firstNumber = prompt("Enter the first number: ");
-secondNumber = prompt("Enter the second number: ");
-
-function addNumbers(firstNumber, secondNumber) {
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+function addNumbers(num1, num2) {
+    if (typeof num1 === '' || typeof num2 === '') {
       return 'Error: Both parameters must be numbers';
     }
-    return num1 + num2;
+    return Number(num1) + Number(num2);
   }
   
   
-  function subtractNumbers(firstNumber, secondNumber) {
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+  function subtractNumbers(num1, num2) {
+    if (typeof num1 === '' || typeof num2 === '') {
       return 'Error: Both parameters must be numbers';
     }
     return num1 - num2;
   }
   
   
-  function divideNumbers(firstNumber, secondNumber) {
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+  function divideNumbers(num1, num2) {
+    if (typeof num1 === '' || typeof num2 === '') {
       return 'Error: Both parameters must be numbers';
     }
     if (num2 === 0) {
@@ -31,25 +28,26 @@ function addNumbers(firstNumber, secondNumber) {
   }
   
  
-  function multiplyNumbers(firstNumber, secondNumber) {
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+  function multiplyNumbers(num1, num2) {
+    if (typeof num1 === '' || typeof num2 === '') {
       return 'Error: Both parameters must be numbers';
     }
     return num1 * num2;
   }
 
+  firstNumber = prompt("Enter the first number: ");
+  secondNumber = prompt("Enter the second number: ");
+
+// if (firstNumber === '' || secondNumber === '') {
+//     alert("Error, you didnt write a number!");
+// }
+
+// else if (secondNumber == 0) {
+//     alert("Error, you cannot divide on zero!");
+// }
 
 
-if (firstNumber === '' || secondNumber === '') {
-    alert("Error, you didnt write a number!");
-}
-
-else if (secondNumber == 0) {
-    alert("Error, you cannot divide on zero!");
-}
-
-
- else if (Number(firstNumber) < Number(secondNumber)) {
+  if (Number(firstNumber) < Number(secondNumber)) {
     question = confirm("Do u want to continue?");
 
     if (!question) {

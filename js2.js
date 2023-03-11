@@ -1,5 +1,5 @@
 const arr = [12, 10, 13, 20, 56, 93, 82, 19, 11, 33];
-let sum = 0;
+let sumArray = 0;
 
 let min = arr[0];
 let max = arr[0];
@@ -35,7 +35,7 @@ function findMinForLoop(arr) {
 for ( i = 0; i < arr.length; i++) {
 
     if (typeof arr[i] === "number") {
-    sum += arr[i];
+    sumArray += arr[i];
     }
     else continue;
 }
@@ -43,7 +43,7 @@ for ( i = 0; i < arr.length; i++) {
 
 console.log(min);
 console.log(max);
-console.log(sum);
+console.log(sumArray);
 
 for (i = 1; i <= 5; i++) {
     for ( j = 0; j < i; j++) {
