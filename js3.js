@@ -35,3 +35,30 @@ const user = {
     }
   };
   
+
+
+  function Accumulator(value) {
+    this.value = value;
+    
+    this.increment = function() {
+      this.value++;
+    };
+    
+    this.decrement = function() {
+      this.value--;
+    };
+  }
+
+
+  function CancelableAccumulator(startingValue) {
+    Accumulator.call(this, startingValue);
+    this.originalValue = startingValue;
+    
+    this.clear = function() {
+      this.value = this.originalValue;
+    };
+  }
+  CancelableAccumulator.prototype = Object.create(Accumulator.prototype);
+  CancelableAccumulator.prototype.constructor = CancelableAccumulator;
+  
+  
